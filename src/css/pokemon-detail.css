@@ -1,0 +1,135 @@
+/* Container principal */
+.pokemon-detail {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: #f6f8fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Botão Voltar */
+#backButton {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  background-color: #6c79db;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/* Card do Pokémon */
+#pokemonInfo {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Nome e número */
+#pokemonInfo h1 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Imagem grande do Pokémon */
+#pokemonInfo img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* Tipos */
+#pokemonInfo p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Lista de tipos com cores */
+.type-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  margin: 0.25rem;
+  color: #fff;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+}
+
+/* Cores por tipo */
+.normal {
+  background-color: #a6a877;
+}
+.grass {
+  background-color: #77c850;
+}
+.fire {
+  background-color: #ee7f30;
+}
+.water {
+  background-color: #678fee;
+}
+.electric {
+  background-color: #f7cf2e;
+}
+.ice {
+  background-color: #98d5d7;
+}
+.ground {
+  background-color: #dfbf69;
+}
+.flying {
+  background-color: #a98ff0;
+}
+.poison {
+  background-color: #a040a0;
+}
+.fighting {
+  background-color: #bf3029;
+}
+.psychic {
+  background-color: #f65687;
+}
+.dark {
+  background-color: #725847;
+}
+.rock {
+  background-color: #b8a137;
+}
+.bug {
+  background-color: #a8b720;
+}
+.ghost {
+  background-color: #6e5896;
+}
+.steel {
+  background-color: #b9b7cf;
+}
+.dragon {
+  background-color: #6f38f6;
+}
+.fairy {
+  background-color: #f9aec7;
+}
+
+/* Responsivo */
+@media screen and (min-width: 576px) {
+  #pokemonInfo {
+    max-width: 500px;
+    padding: 3rem;
+  }
+
+  #pokemonInfo img {
+    width: 250px;
+    height: 250px;
+  }
+}
