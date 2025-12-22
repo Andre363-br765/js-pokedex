@@ -6,6 +6,21 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none; 
+    color: inherit;          
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+
 body {
     background-color: #f6f8fc;
 }
