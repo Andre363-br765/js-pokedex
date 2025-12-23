@@ -23,3 +23,7 @@ build/
 # Outros arquivos temporários
 *.tmp
 *.temp
+
+testes
+
+tests/

@@ -1,5 +1,9 @@
 /* pokedex.css */
 
+main {
+  min-height: 100vh;
+}
+
 /* Grid de Pokémon */
 .pokemons {
   display: grid;
@@ -97,6 +101,15 @@
   border-radius: 1rem;
   cursor: pointer;
 }
+
+.pokemon-details {
+  background: linear-gradient(
+    180deg,
+    var(--type-color),
+    rgba(0, 0, 0, 0.15)
+  );
+}
+
 
 /* Cores por tipo */
 .normal {

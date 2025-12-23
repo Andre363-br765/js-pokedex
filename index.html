@@ -24,8 +24,15 @@
 </head>
 
 <body>
-    <section class="content">
-        <h1>Pokédex</h1>
+    <main class="content">
+        <header>
+            <div class="header-actions">
+                <button class="back-btn">←</button>
+                <button class="menu-btn" aria-label="Abrir menu lateral">&#9776;</button>
+            </div>
+
+            <h1>Pokédex</h1>
+        </header>
 
         <!-- Lista de Pokémon -->
         <ol id="pokemonList" class="pokemons"></ol>
@@ -34,7 +41,7 @@
         <div class="pagination">
             <button id="loadMoreButton" type="button">Load More</button>
         </div>
-    </section>
+    </main>
 
     <!-- JS modular -->
     <script type="module" src="./src/js/pokemon-api/main.js"></script>
