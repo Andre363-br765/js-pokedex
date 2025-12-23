@@ -1,6 +1,7 @@
 export function convertPokemonToLi(pokemon) {
   return `
-    <li class="pokemon ${pokemon.type}">
+    <li class="pokemon"
+        style="--type-color: var(--type-${pokemon.type})">
         <a href="./src/pages/pokemon-detail.html?id=${pokemon.number}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>

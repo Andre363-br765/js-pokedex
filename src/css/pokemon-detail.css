@@ -12,34 +12,9 @@
   background: linear-gradient(
     180deg,
     var(--type-color),
-    rgba(0, 0, 0, 0.15)
+    color-mix(in srgb, var(--type-color) 70%, black)
   );
 }
-
-/* =========================
-   CORES POR TIPO
-========================= */
-.pokemon-details.grass {
-  background: linear-gradient(180deg, #48d0b0, #2bbfa3);
-}
-
-.pokemon-details.fire {
-  background: linear-gradient(180deg, #fb6c6c, #f44);
-}
-
-.pokemon-details.water {
-  background: linear-gradient(180deg, #76befe, #4a90da);
-}
-
-.pokemon-details.electric {
-  background: linear-gradient(180deg, #ffd86f, #f7c545);
-}
-
-.pokemon-details.poison {
-  background: linear-gradient(180deg, #9f5bba, #7b3fa0);
-}
-
-/* depois você pode completar com outros tipos */
 
 /* =========================
    HEADER

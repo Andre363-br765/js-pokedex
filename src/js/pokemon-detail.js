@@ -15,8 +15,7 @@ function loadPokemonDetail(id) {
       const abilities = pokemon.abilities.map((a) => a.ability.name).join(", ");
 
       container.innerHTML = `
-        <main class="pokemon-details ${mainType}">
-
+        <main class="pokemon-details ${mainType}" style="--type-color: var(--type-${mainType})">
           <!-- HEADER -->
           <header class="details-header">
             <div class="header-actions">

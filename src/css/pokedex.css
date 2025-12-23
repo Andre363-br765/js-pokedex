@@ -102,14 +102,13 @@ main {
   cursor: pointer;
 }
 
-.pokemon-details {
+.pokemon {
   background: linear-gradient(
     180deg,
     var(--type-color),
-    rgba(0, 0, 0, 0.15)
+    color-mix(in srgb, var(--type-color) 70%, black)
   );
 }
-
 
 /* Cores por tipo */
 .normal {
