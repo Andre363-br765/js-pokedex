@@ -142,6 +142,35 @@ dd {
   display: none;
 }
 
+.moves-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.moves-list {
+  flex: 1;
+}
+
+.pokemon-anim {
+  width: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-anim img {
+  width: 96px;
+  image-rendering: pixelated;
+  animation: floatPokemon 2.5s ease-in-out infinite;
+}
+
+@keyframes floatPokemon {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
 /* =========================
    RESPONSIVO
 ========================= */

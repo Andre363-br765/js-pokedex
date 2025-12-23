@@ -2,14 +2,10 @@ export function renderPokemonDetail(pokemon) {
   const mainType = pokemon.types[0].type.name;
 
   const typesHtml = pokemon.types
-    .map(
-      (t) => `<span class="types ${t.type.name}">${t.type.name}</span>`
-    )
+    .map((t) => `<span class="types ${t.type.name}">${t.type.name}</span>`)
     .join("");
 
-  const abilities = pokemon.abilities
-    .map((a) => a.ability.name)
-    .join(", ");
+  const abilities = pokemon.abilities.map((a) => a.ability.name).join(", ");
 
   return `
     <main class="pokemon-details"
@@ -62,17 +58,30 @@ export function renderPokemonDetail(pokemon) {
         <section id="stats" role="tabpanel" hidden>
           ${pokemon.stats
             .map(
-              (s) =>
-                `<p><strong>${s.stat.name}:</strong> ${s.base_stat}</p>`
+              (s) => `<p><strong>${s.stat.name}:</strong> ${s.base_stat}</p>`
             )
             .join("")}
         </section>
 
         <section id="moves" role="tabpanel" hidden>
-          ${pokemon.moves
-            .slice(0, 10)
-            .map((m) => `<p>${m.move.name}</p>`)
-            .join("")}
+          <div class="moves-layout">
+            <!-- LISTA DE MOVES (seu código original) -->
+            <div class="moves-list">
+              ${pokemon.moves
+                .slice(0, 10)
+                .map((m) => `<p>${m.move.name}</p>`)
+                .join("")}
+            </div>
+  
+            <!-- POKÉMON ANIMADO -->
+            <div class="pokemon-anim">
+              <img src="${
+                pokemon.sprites.versions?.["generation-v"]?.["black-white"]
+                  ?.animated?.front_default || pokemon.sprites.front_default
+              }" 
+              alt="${pokemon.name}">
+            </div>
+          </div>
         </section>
       </section>
     </main>
