@@ -23,12 +23,6 @@
   padding: 1.25rem;
 }
 
-.header-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .back-btn,
 .curti-btn {
   background: none;

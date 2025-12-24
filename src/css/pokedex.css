@@ -1,5 +1,52 @@
+/* =========================
+   Layout e conteúdo
+========================= */
 .content {
   min-height: 100vh;
+}
+
+/* =========================
+   header
+========================= */
+/* botão */
+.header-actions button {
+  background: none;       
+  border: none;           
+  color: #678fee;       
+  font-size: 1.25rem;     
+  padding: 0.25rem 0.5rem; 
+  border-radius: 0.5rem;  
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.header-actions button:hover {
+  background-color: rgba(103, 143, 238, 0.1); 
+  color: #ee7f30; 
+}
+
+.header-actions button:focus {
+  outline: 2px solid #678fee; 
+  outline-offset: 2px;
+}
+
+/* menu lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: #f7f7f7;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    z-index: 1000; 
+}
+
+/* Quando o menu estiver aberto */
+.sidebar.open {
+    left: 0;
 }
 
 /* Grid de Pokémon */
@@ -25,13 +72,12 @@
     var(--type-color),
     color-mix(in srgb, var(--type-color) 70%, black)
   );
+  transition: transform 0.2s;
 }
 
 .pokemon:hover {
-    transform: translateY(-3px);
-    transition: transform 0.2s;
+  transform: translateY(-3px);
 }
-
 
 .pokemon .number {
   font-size: 0.625rem;
@@ -87,81 +133,80 @@
   cursor: pointer;
 }
 
-/* Footer geral */
+/* =========================
+   Footer
+========================= */
 .footer {
-    display: flex;
-    flex-direction: column; /* empilha os itens verticalmente em telas pequenas */
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    background-color: #f7f7f7; /* cor clara neutra */
-    gap: 0.5rem;
-    text-align: center;
-    border-top: 2px solid #eee; /* separação discreta do conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  gap: 0.5rem;
+  text-align: center;
+  border-top: 2px solid #eee;
 }
 
-/* Logo no footer */
 .footer-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    margin-bottom: 0.5rem;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
 }
 
-/* Texto do copyright */
 .footer-text {
-    font-size: 0.9rem;
-    color: #333;
+  font-size: 0.9rem;
+  color: #333;
 }
 
-/* Links do footer */
 .footer-links {
-    display: flex;
-    gap: 1rem; /* espaçamento entre links */
+  display: flex;
+  gap: 1rem;
 }
 
 .footer-links a {
-    text-decoration: none;
-    color: #678fee; /* cor estilo Pokémon */
-    font-weight: 500;
-    transition: color 0.2s;
+  text-decoration: none;
+  color: #678fee;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
 .footer-links a:hover {
-    color: #ee7f30; /* muda a cor ao passar o mouse */
+  color: #ee7f30;
 }
 
-/* Responsividade simples */
+/* Footer responsivo */
 @media (min-width: 600px) {
-    .footer {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-        padding: 1rem 2rem;
-    }
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1rem 2rem;
+  }
 
-    .footer-links {
-        gap: 2rem;
-    }
+  .footer-links {
+    gap: 2rem;
+  }
 }
 
 /* =========================
-   RESPONSIVO
+   Grid Responsivo Pokémon
 ========================= */
 @media screen and (min-width: 380px) {
   .pokemons {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 576px) {
   .pokemons {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (min-width: 992px) {
   .pokemons {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }

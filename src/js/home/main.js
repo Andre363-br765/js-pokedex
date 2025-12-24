@@ -1,3 +1,5 @@
+import './components/header.js'
+
 import { pokeApi } from './api/pokemon.js'
 import { renderPokemonList } from './components/render.js'
 
@@ -9,7 +11,6 @@ let offset = 0
 const limit = 100
 // let maxRecords = 151
 let maxRecords = 1010
-
 
 function loadPokemonItems(offset, limit) {
     pokeApi.getPokemons(offset, limit).then(pokemons => {
