@@ -142,6 +142,9 @@ dd {
   display: none;
 }
 
+/* =========================
+   ANIMAÇÃO
+========================= */
 .moves-layout {
   display: flex;
   justify-content: space-between;

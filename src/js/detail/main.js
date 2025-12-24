@@ -1,7 +1,7 @@
-import { getPokemonById } from "./detail-api.js";
-import { renderPokemonDetail } from "./render.js";
-import { initTabs } from "./tabs.js";
-import { isPokemonLiked, toggleLikePokemon } from "./favorite.js";
+import { getPokemonById } from "./api/detail.js";
+import { renderPokemonDetail } from "./components/render.js";
+import { initTabs } from "./components/tabs.js";
+import { isPokemonLiked, toggleLikePokemon } from "./components/favorite.js";
 
 const params = new URLSearchParams(window.location.search);
 const pokemonId = Number(params.get("id"));

@@ -1,5 +1,5 @@
-import { pokeApi } from './poke-api.js'
-import { renderPokemonList } from './render.js'
+import { pokeApi } from './api/pokemon.js'
+import { renderPokemonList } from './components/render.js'
 
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')

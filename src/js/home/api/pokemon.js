@@ -1,4 +1,4 @@
-import { Pokemon } from "./pokemon-model.js";
+import { Pokemon } from "../models/pokemon.js";
 
 export const pokeApi = {};
 

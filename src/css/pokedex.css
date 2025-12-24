@@ -1,6 +1,4 @@
-/* pokedex.css */
-
-main {
+.content {
   min-height: 100vh;
 }
 
@@ -9,33 +7,9 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.5rem;
-  list-style: none;
-}
-
-.pokemons {
-  display: grid;
-  grid-template-columns: 1fr;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-@media screen and (min-width: 380px) {
-  .pokemons {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .pokemons {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .pokemons {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
 }
 
 /* Cartão Pokémon */
@@ -46,6 +20,11 @@ main {
   border-radius: 1rem;
   color: #fff;
   overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    var(--type-color),
+    color-mix(in srgb, var(--type-color) 70%, black)
+  );
 }
 
 .pokemon .number {
@@ -102,10 +81,81 @@ main {
   cursor: pointer;
 }
 
-.pokemon {
-  background: linear-gradient(
-    180deg,
-    var(--type-color),
-    color-mix(in srgb, var(--type-color) 70%, black)
-  );
+/* Footer geral */
+.footer {
+    display: flex;
+    flex-direction: column; /* empilha os itens verticalmente em telas pequenas */
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #f7f7f7; /* cor clara neutra */
+    gap: 0.5rem;
+    text-align: center;
+    border-top: 2px solid #eee; /* separação discreta do conteúdo */
+}
+
+/* Logo no footer */
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+/* Texto do copyright */
+.footer-text {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Links do footer */
+.footer-links {
+    display: flex;
+    gap: 1rem; /* espaçamento entre links */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #678fee; /* cor estilo Pokémon */
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ee7f30; /* muda a cor ao passar o mouse */
+}
+
+/* Responsividade simples */
+@media (min-width: 600px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 1rem 2rem;
+    }
+
+    .footer-links {
+        gap: 2rem;
+    }
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media screen and (min-width: 380px) {
+  .pokemons {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .pokemons {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .pokemons {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

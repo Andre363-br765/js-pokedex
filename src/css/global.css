@@ -1,4 +1,6 @@
-/* Cores por tipo */
+/* =========================
+   VARIÁVEIS GLOBAIS
+========================= */
 :root {
   /* Tipos Pokémon */
   --type-normal: #a6a877;
@@ -21,8 +23,9 @@
   --type-fairy: #f9aec7;
 }
 
-/* Global Styles */
-
+/* =========================
+   ESTILOS GLOBAIS / RESET
+========================= */
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -44,6 +47,9 @@ a:active {
   outline: none;
 }
 
+/* =========================
+   BODY
+========================= */
 body {
   font-family: "Roboto", sans-serif;
   background-color: #f6f8fc;
@@ -60,12 +66,16 @@ main {
   background-color: #fff;
 }
 
+/* Header*/
 .header-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* =========================
+   RESPONSIVO
+========================= */
 @media screen and (min-width: 992px) {
   main {
     max-width: 992px;
