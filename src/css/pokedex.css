@@ -27,6 +27,12 @@
   );
 }
 
+.pokemon:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s;
+}
+
+
 .pokemon .number {
   font-size: 0.625rem;
   opacity: 0.3;
